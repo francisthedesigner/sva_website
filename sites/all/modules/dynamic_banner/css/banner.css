@@ -1,0 +1,45 @@
+/* Store all your css for banners in here*/
+#banner{
+
+}
+
+#banner img{
+}
+
+#banner p{
+}
+
+#banner-left{
+	height: 130px;
+	width: 100%;
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	vertical-align: middle;
+}
+
+#banner-right{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+#banner-left img{
+}
+
+#banner-right img{
+}
+
+#banner-left p{
+  font-size: 26px;
+  width: 100%;
+  color: white;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 45px;
+  text-shadow: 1px 1px #aaa;
+}
+/* You get the idea */
+/* If you want to change the divs or elements just go back to the template file */

@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900italic,800italic,900,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800);
+/* Reset
+================================================== */
+body{
+	color: #505050;
+	font: 14px/1.6 'Raleway', sans-serif;
+}
+ul, ol{
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a,{
+	color: #2b2b2b !important;
+}
+h1 {
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+h2 {
+	color: #2b2b2b !important;
+	font-size: 22px !important;
+	line-height: 34px !important;
+	font-weight: bold !important;
+}
+
+h2.h1{
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: bold;
+	color: #505050;
+	margin:0;
+	padding: 0;
+}
+
+a{
+	color: #505050;
+}
+a:hover {
+	color: #4d617e;
+	text-decoration: none;
+}
+/*button style*/
+a.btn {
+	color: #4c4c4c;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	background-color: transparent;
+	border: 1px solid #4d617e;
+	border-radius: 2px;
+}
+a.btn:hover {
+	color: #fff;
+	background-color:#4d617e; 
+}
+/*utility*/
+.vcenter-parent {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.vcenter {
+	display: table-cell;
+}
+.vcenter {
+	vertical-align: middle;
+}
+/*navigation bar*/
+.navbar {
+	height: 80px;
+	background-color: #fff;
+	border:none;
+	margin-bottom: 0;
+}
+#top-social-links {
+	display: none;
+	width: 0;
+}
+
+
+#top-menu{
+	background-color: rgba(77,97,126, 0.95);
+}
+#top-menu li:hover, #top-menu li.active{
+	background-color: #4d617e !important;
+}
+#top-menu li > a{
+	color: #fff;
+	font-weight:bold;
+	font-size: 12px;
+	text-align: center;
+	background: none;
+}
+#top-menu li > a:hover{
+	background-color: none;
+}
+.mobile-social{
+	display: block;
+}
+
+@media (min-width: 768px) {
+	#top-social-links {
+		clear:right;
+		display: inline-table;
+		float: left;
+	}
+	#btn_member_login{
+		background-color: #4d617e;
+		border-radius: 2px;
+		border:1px solid #4d617e;
+	}
+
+	#btn_member_login > a{
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	#top-social-links > li > a{
+		padding: 0 15px 0 0;
+		margin: 0;
+		display: block;
+		float: left;
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	#top-menu{
+		clear: right;
+		margin-top: 3px;
+		margin-right: -15px;
+		background-color: #fff !important;
+	}
+	#top-menu li:hover, #top-menu li.active{
+		padding-bottom: 5px;
+		background-color: #4d617e;
+	}
+	#top-menu li > a{
+		background-color: #fff;
+		color: #4c4c4c;
+		font-weight:bold;
+		font-size: 12px;
+	}
+	#top-menu li > a:hover{
+		background-color: none;
+	}
+	#top-menu li:last-child a{
+		padding-right: 0;
+	}
+	.mobile-social{
+		display: none !important;
+	}
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+	height: 500px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	position: relative;
+	left: 0;
+	z-index: -10;
+	background: rgba(0,0,0,0.65);
+	padding: 35px 50px;
+}
+.carousel-caption > h1 {
+	color: #fff;
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: bold;
+	text-align: left;
+}
+.carousel-caption > p {
+	text-align: left;
+	color: #b2b2b2;
+	font-size: 15px;
+	line-height: 21px;
+}
+.carousel-caption > p > a.btn {
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 16px;
+	background-color: #4d617e;
+	border: none;
+	border-radius: 3px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+	height: 500px;
+	background-color: #777;
+}
+.carousel-inner > .item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 500px;
+}
+.carousel-inner > .item > div.slides {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -100;
+}
+
+/*front about block*/
+#front-about{
+	float: left;
+	background-color: #fff;
+	background: url(images/img_fern1.png), url(images/img_fern2.png);
+	background-position: bottom left,top right;
+	background-repeat: no-repeat, no-repeat;
+	text-align: center;
+	width: 100%;
+	padding-top: 57.5px;
+	padding-bottom: 57.5px;
+}
+
+#front-about .content-about{
+	text-align: center;
+}
+.content-about h1 {
+	color: #2b2b2b;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.content-about hr {
+	width: 48px;
+	color: #4d617e;
+	margin: 0 auto;
+	height: 3px;
+	border: 1px solid #4d617e;
+	display: block;
+	background-color: #4d617e;
+}
+.content-about p {
+	margin-top: 20px;
+	color: #4c4c4c;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/*front content*/
+.front #primary{
+	padding-left: 0 !important;
+	padding-right:0 !important;
+}
+.front #content .node-teaser {
+	background-color: #f0f4f5;
+}
+.front #content .node-teaser h2.h1{
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: bold;
+	color: #505050;
+	margin:0;
+	padding: 0;
+}
+.front #content .node-teaser li {
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 14px;
+	line-height: 14px;
+	color: #505050;
+}
+.front #content .node-teaser li a{
+	font: 14px/1.6 'Raleway', sans-serif;
+	line-height: 16px;
+	color: #4c4c4c;
+	font-weight: bold;
+	background-color: transparent;
+	border-radius: 4px;
+	border:2px solid #4d617e;
+}
+.front #content .node-teaser li a:hover{
+	color: #fff;
+	background-color: #4d617e;
+}
+.front #content .node-teaser p {
+	margin-bottom: 20px;
+}
+@media(min-width: 768px){
+	.front #content .node-teaser .right-content{
+		padding-left: 110px;
+		height: 200px;
+		padding: 100px 0 100px 100px;
+	}
+	.front #content .node-teaser .left-content{
+		height: 200px;
+		padding: 100px 0 100px 0px;
+	}
+}
+.node-teaser .section-image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+}
+
+/* bottom*/
+#bottom{
+  /*padding: 20px 0px 40px 0px;*/
+  background: #e9e9e5;
+}
+
+#block-menu-menu-resources-menu ul{
+	list-style: none;
+	display: block;
+	width: 100%;
+}
