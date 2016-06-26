@@ -66,11 +66,11 @@
 global $base_url;
 ?>
 <div id="page">
-  <nav class="navbar navbar-default">
-    <div class="container">
+  <nav class="navbar navbar-default container">
+    
       <div class="row">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header col-md-4">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -85,6 +85,7 @@ global $base_url;
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-8">
         <div class="collapse navbar-collapse" id="main-menu">
           <ul class="nav navbar-nav text-uppercase navbar-right" id="top-social-links">
             <li>
@@ -115,7 +116,6 @@ global $base_url;
           }
           print drupal_render($main_menu_tree);
           ?>
-
           <ul class="nav navbar-nav text-uppercase navbar-right" id="mobile-social-links">
             <li class="social">
               <a href="https://facebook.com/socialvalueaotearoa" rel="Facebook">
@@ -135,7 +135,8 @@ global $base_url;
               <a href="<?php print $base_url;?>/user/logout" rel="Login">Logout</a>
               <?php endif; ?>
             </li>
-          </ul>          
+          </ul> 
+                  
         </div><!-- /.navbar-collapse -->
       </div>
     </div><!-- /.container>-->
@@ -285,8 +286,14 @@ global $base_url;
            </aside>
          </div>
        <?php endif; ?>
-
-       <div id="primary" class="content-area col-lg-<?php print $primary_col; ?>">
+<?php if ($page['sidebar_first']): ?>
+        <div class="hidden-lg   col-md-12 mobilech" style="z-index:5;" >
+          <aside id="sidebar" role="complementary">
+           <?php print render($page['sidebar_first']); ?>
+         </aside>
+       </div>
+     <?php endif; ?>
+       <div id="primary" class="content-area col-lg-<?php print $primary_col; ?> ">
         <section id="content" role="main">
           <?php if (theme_get_setting('breadcrumbs')): ?><?php if ($breadcrumb): ?><div id="breadcrumbs"><?php print $breadcrumb; ?></div><?php endif;?><?php endif; ?>
           <?php print $messages; ?>
@@ -300,7 +307,7 @@ global $base_url;
         </section>
       </div>
       <?php if ($page['sidebar_first']): ?>
-        <div class="col-lg-3" >
+        <div class="col-lg-3 hidden-md hidden-sm hidden-xs " >
           <aside id="sidebar" role="complementary">
            <?php print render($page['sidebar_first']); ?>
          </aside>
@@ -329,16 +336,16 @@ global $base_url;
   <div id="bottom" class="col-lg-12">
     <div class="container">
       <div class="row">
-        <?php if($page['footer_first']): ?><div class="footer-block col-lg-<?php print $footer_col; ?>">
+        <?php if($page['footer_first']): ?><div class="footer-block col-lg-<?php print $footer_col; ?> col-md-3  col-sm-3 mnheight" >
           <?php print render ($page['footer_first']); ?>
-        </div><?php endif; ?>
-        <?php if($page['footer_second']): ?><div class="footer-block col-lg-<?php print $footer_col; ?>">
+        </div><?php endif; ?> 
+        <?php if($page['footer_second']): ?><div class="footer-block col-lg-<?php print $footer_col;?>  col-md-3 col-sm-3 mnheight" >
           <?php print render ($page['footer_second']); ?>
         </div><?php endif; ?>
-        <?php if($page['footer_third']): ?><div class="footer-block col-lg-<?php print $footer_col; ?>">
+        <?php if($page['footer_third']): ?><div class="footer-block col-lg-<?php print $footer_col;?> col-md-3 col-sm-3 mnheight" >
           <?php print render ($page['footer_third']); ?>
         </div><?php endif; ?>
-        <?php if($page['footer_fourth']): ?><div class="footer-block col-lg-<?php print $footer_col; ?>">
+        <?php if($page['footer_fourth']): ?><div class="footer-block col-lg-<?php print $footer_col;?> col-md-3 col-sm-3 mnheight" >
           <?php print render ($page['footer_fourth']); ?>
         </div><?php endif; ?>
       </div>

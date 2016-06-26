@@ -304,11 +304,8 @@ function nexus_preprocess_user_login(&$vars) {
   $vars['login'] = drupal_render_children($vars['form']);
 }
 
-function nexus_form_alter(&$form, $form_state, $form_id) {
-  if ($form_id === 'commerce_cart_add_to_cart_form_5' || $form_id === 'commerce_cart_add_to_cart_form_1') { 
-      $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Click here to register');
-    }
-  if ($form_id === 'commerce_cart_add_to_cart_form_4' || $form_id === 'commerce_cart_add_to_cart_form_3') { 
-      $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Pay online now');
-    }
+function nexus_form_alter(&$form, &$form_state, $form_id){//replace your module name with MYMODULE
+  if(strpos($form_id, 'commerce-cart-add-to-cart-form-5') !== false){//my form ID is "commerce-cart-add-to-cart-form-65", replace it with your form ID.
+    $form['submit']['#value'] = t('Pay online now');//Put the text which you want to make appear instead of "Add to cart".
+  }
 }

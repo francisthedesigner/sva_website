@@ -109,15 +109,8 @@
 		right:10px;
 		z-index: 2000;
 	}
-	.not-front #header-block{
-		margin:0;
-	}
 	#sidebar ul#top-menu{
 		min-height: 0;
-		float: none;
-		border:none;
-		min-height: 0;
-		margin: 0;
 	}
 	.page-events #sidebar, .page-blogs #sidebar{
 		min-height: 0;
@@ -126,20 +119,18 @@
 		margin-top: 50px;
 	}
 	#sidebar{
-		margin: 0 !important;
-	}
-	#sidebar{
 		min-height: 0;
-		margin: 0;
-		ul#top-menu{
+		#top-menu{
 			float: none;
 			border:none;
 			min-height: 0;
 			margin-top: 0;
-			min-height: 0;
-			li{
-				a{
+			ul{
+				min-height: 0;
+				li{
+					a{
 
+					}
 				}
 			}
 		}
@@ -244,11 +235,71 @@
 	#modal-content{
 		width: 100% !important;
 	}
+	.col-md-8{
+	padding-left:0px;
+	}
+	.mnheight{
+ 	min-height:200px;
+ }
+ 
+ 
+ 
 }
-
-@media (min-width: 480px) {
+@media(max-width: 1300px) {
+ #block-menu-menu-resources-menu #top-menu {
+   border-left: none;
+	}
+	#sidebar ul#top-menu li:first-child {
+    margin-top: 100px;
+    border-top:5px solid gray;
+}
+.useful-link {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.tabs-wrapper{
+    display: none;
+}
+.view-teaser-image{
+		width: auto;
+		float: none;
+		margin: 50px 0 50px 0;
+	}
+	.page-events .event-teaser-wrapper{
+		width: auto;
+		height: auto;
+	}
+	.page-events .event-content{
+		width: auto;
+		float: none;
+		border:none;
+		height: auto;
+		margin-bottom: 50px;
+	}
+	.page-events .event-summary{
+		width: auto;
+		float: none;
+		border: none;
+		height: auto;
+	}
+	.page-events .event-content .field-type-text-with-summary{
+		height: auto;
+	}
+        .page-blogs #sidebar, .page-events #sidebar{
+            min-height: 200px;
+        }
+        .mobilech{
+     float: none;
+        }
+        
+}
+@media(min-width: 480px) {
 	body{
-		min-width: 1240px;
+		//min-width: 1300px;
+	}
+	#front-about{
+		float: none;
+		background-size: 20%, 20%;
 	}
 	#top-social-links {
 		clear:right;
@@ -282,12 +333,10 @@
 		position:;
 	}
 	.front #content .node-teaser .right-content{
-		padding-left: 110px;
-		height: 200px;
-		padding: 100px 0 100px 100px;
+		height: 400px;
 	}
 	.front #content .node-teaser .left-content{
-		height: 200px;
-		padding: 100px 100px 100px 0px;
+		height: 400px;
 	}
+
 }
