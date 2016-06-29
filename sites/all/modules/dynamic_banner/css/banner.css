@@ -30,16 +30,7 @@
 #banner-right img{
 }
 
-#banner-left p{
-  font-size: 26px;
-  width: 100%;
-  color: white;
-  font-weight: bolder;
-  text-transform: capitalize;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 45px;
-  text-shadow: 1px 1px #aaa;
-}
+
+
 /* You get the idea */
 /* If you want to change the divs or elements just go back to the template file */
